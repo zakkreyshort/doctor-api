@@ -32,9 +32,7 @@ $(document).ready(function(){
         
         (async () => {
             let doctor = new Doctor;
-            console.log(doctor);
             const response = await doctor.getDoctor(name);
-            console.log(response);
             getElements(response);
         })();
 
