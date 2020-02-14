@@ -29,10 +29,11 @@ $(document).ready(function(){
     $("#doctorForm").submit(function(event){
         event.preventDefault();
         const name = $("#inputtedDoctor").val();
+        const city = $("#inputtedCity").val();
         
         (async () => {
             let doctor = new Doctor;
-            const response = await doctor.getDoctor(name);
+            const response = await doctor.getDoctor(name, city);
             getElements(response);
         })();
 
