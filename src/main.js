@@ -46,44 +46,13 @@ $(document).ready(function() {
                 $("#otherOutputHere").text('error in handling request');
             } else if (response.data.length > 0){
                 // console.log(response.data); // returning array of doctors 90 total on 'cough'
-                response.data.forEach(function(doctor){
-                    console.log(doctor);
-                    $("ul#nameResult").append(`<li>${doctor.practices} </li>`);
-                })
-                    }
-                
+                for(let i = 0; i <= response.data.length; i++){
+                    response.data.forEach(function(doctor){
+                        console.log(doctor);
+                        $("ul#nameResult").append(`<li>${doctor.practices[i].name} </li>`);
+                    })
                 }
-            }
-        
-        
-    )
+                    }        
+                }
+            })
 });
-
-
-
-
-
-
-
-
-
-//         event.preventDefault();
-//         const symptom = $("#inputtedSymptom").val();
-
-//         (async () => {
-//             let doctor = new Doctor;
-//             const response = await doctor.checkSymptom(symptom);
-//             getElements(response);
-//         })();
-
-//         const getElements = function (response) {
-//             if (response === false) {
-//                 $("#otherOutputHere").text('error in handling request');
-//             } else if (response.data.length > 0) {
-//                 for (let i = 0; i < doctor.practices.length; i++) {
-//                     $("ul#otherNameResult").append(`<li>${doctor.profile.first_name} ${doctor.profile.last_name} ${doctor.practices[i].visit_address.city} ${doctor.practices[i].visit_address.state} ${doctor.practices[i].visit_address.street} ${doctor.practices[i].visit_address.zip} </li>`);
-// //                 };
-//             }
-//         };
-//     });
-// }
