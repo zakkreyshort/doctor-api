@@ -23,9 +23,12 @@ $(document).ready(function() {
             if (response === false) {
                 $("#outputHere").text('error in handling request');
             } else if (response.data.length > 0) {
-                response.data.forEach(function (doctor) {
-                    $("ul#nameResult").append(`<li>${doctor.profile.first_name} ${doctor.profile.last_name} ${doctor.practices[0].visit_address.city} ${doctor.practices[0].visit_address.state} ${doctor.practices[0].visit_address.street} ${doctor.practices[0].visit_address.zip} </li>`);
-                })
+                for (let i = 0; i <= response.data.length; i++){
+                    response.data.forEach(function (doctor) {
+                        $("ul#nameResult").append(`<li>${doctor.profile.first_name} ${doctor.profile.last_name} ${doctor.practices[i].visit_address.city} ${doctor.practices[i].visit_address.state} ${doctor.practices[i].visit_address.street} ${doctor.practices[i].visit_address.zip} </li>`);
+
+                     })
+                }
             }
         };
 
