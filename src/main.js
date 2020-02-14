@@ -14,21 +14,30 @@ $(document).ready(function(){
             getElements(response);
         })();
         function getElements(response){
+            let doctorArray = [];
+            console.log(response); // at this point response is false, why?
+            for(let i = 0; i<10; i++){
+                doctorArray.push()
+            }
             if(response){
                 $("#outputHere").text(response.data);
             }
         }
     });
-    $("#doctorForm").submit(function(){
+
+    $("#doctorForm").submit(function(event){
+        event.preventDefault();
+
+
         (async () => {
             let doctor = new Doctor;
-            const response = await doctor.getDoctor();
-            getElements(response);
+            const answer = await doctor.getDoctor();
+            getElements(answer);
         })();
-        function getElements(response){
-            if(response){
-                $("#otherOutput").text(response.data);
+        function getElements(answer){
+            if(answer){
+                $("#otherOutput").text(answer.data);
             }
         }
     });
-    })
+})
