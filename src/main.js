@@ -48,8 +48,7 @@ $(document).ready(function() {
                 // console.log(response.data); // returning array of doctors 90 total on 'cough'
                 for(let i = 0; i <= response.data.length; i++){
                     response.data.forEach(function(doctor){
-                        console.log(doctor);
-                        $("ul#nameResult").append(`<li>${doctor.practices[i].name} </li>`);
+                        $("ul#nameResult").append(`<li>${doctor.practices[i].name} ${doctor.practices[i].visit_address.street} ${doctor.practices[i].visit_address.city} ${doctor.practices[i].visit_address.state} ${doctor.practices[i].visit_address.zip} </li>`);
                     })
                 }
                     }        
