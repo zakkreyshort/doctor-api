@@ -12,3 +12,19 @@ body{
     opacity: 0.9;
     color: white;
 }
+
+#topHead{
+    text-align: center;
+}
+
+form{
+    text-align: center;
+}
+
+#outputHere, h3, #nameResult{
+    text-align: center;
+}
+
+ul{
+    list-style-position: inside
+}

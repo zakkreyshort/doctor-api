@@ -22,6 +22,8 @@ $(document).ready(function() {
         const getElements = function (response) {
             if (response === false) {
                 $("#outputHere").text('error in handling request');
+            } else if (response.data == 0){
+                $("ul#nameResult").append("No results shown")
             } else if (response.data.length > 0) {
                 for (let i = 0; i <= response.data.length; i++){
                     response.data.forEach(function (doctor) {
@@ -31,7 +33,6 @@ $(document).ready(function() {
                 }
             }
         };
-
     });
 
     $("#symptomForm").submit(function(event) {
@@ -47,6 +48,8 @@ $(document).ready(function() {
         const getElements = function(response){
             if(response === false){
                 $("#otherOutputHere").text('error in handling request');
+            } else if (response.data == 0){
+                $("ul#nameResult").append("No results shown") 
             } else if (response.data.length > 0){
                 for(let i = 0; i <= response.data.length; i++){
                     response.data.forEach(function(doctor){
