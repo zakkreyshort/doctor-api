@@ -29,6 +29,6 @@ export class Doctor {
         } catch(error){
             return false;
         }
-
     }
+    
 }
