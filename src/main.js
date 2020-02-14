@@ -48,10 +48,9 @@ $(document).ready(function() {
             if(response === false){
                 $("#otherOutputHere").text('error in handling request');
             } else if (response.data.length > 0){
-                // console.log(response.data); // returning array of doctors 90 total on 'cough'
                 for(let i = 0; i <= response.data.length; i++){
                     response.data.forEach(function(doctor){
-                        $("ul#nameResult").append(`<li>${doctor.practices[i].name} ${doctor.practices[i].visit_address.street} ${doctor.practices[i].visit_address.city} ${doctor.practices[i].visit_address.state} ${doctor.practices[i].visit_address.zip} </li>`);
+                        $("ul#nameResult").append(`<li>${doctor.practices[i].name} <br> ${doctor.practices[i].visit_address.street} <br> ${doctor.practices[i].visit_address.city} <br> ${doctor.practices[i].visit_address.state} <br> ${doctor.practices[i].visit_address.zip} </li>`);
                     })
                 }
                     }        

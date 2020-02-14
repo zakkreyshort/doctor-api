@@ -1,0 +1,14 @@
+body{
+    background-image: url(https://images.freecreatives.com/wp-content/uploads/2015/03/Huge-Backgrounds-2-1024x683.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    background-color: black;
+    opacity: 0.9;
+    color: white;
+}
