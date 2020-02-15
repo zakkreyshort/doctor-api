@@ -14,8 +14,12 @@ _This project is a webpage that allows a user to input an ailment or doctor, and
 
 | Specification | Example Input | Example Output |
 | ------------- |:-------------:| --------------:|
-| User enters an ailment | Sore Throat | Return: List of doctors |
+| User enters an ailment | Sore Throat | Return: List of doctors in Portland Metro |
 | User enters a doctor name | Allen | Return: List of doctors with 'Allen' in name. |
+| User enters a state/city | or-portland | Return: List of doctors in Portland, Or |
+| User enters an ailment that has no doctors around | Flu | Return: No results found |
+| If API call has error | 400 | Return: Error Message |
+
 
 
 
