@@ -42,7 +42,7 @@ _This project is a webpage that allows a user to input an ailment or doctor, and
 * _Documentation for the BetterDoctor API used can be found here: https://developer.betterdoctor.com/documentation15_
 
 ## Bugs
-_FILL OUT LATER_
+_No known bugs at this time. Properly returns information from both forms in one place._
 
 ## Technologies Used
 

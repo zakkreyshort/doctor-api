@@ -4,8 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import { Doctor } from "./doctor";
 
-
-
 $(document).ready(function() {
 // form for doctor and city/state
     $("#illnessForm").submit(function(event) {
