@@ -12,7 +12,7 @@ export class Doctor {
                 return jsonifiedResponse; 
             }
         } catch(error) {
-            return false;
+            return error.message;
         }
     }
     
@@ -26,7 +26,7 @@ export class Doctor {
                 return jsonifiedResponse; 
             }
         } catch(error){
-            return false;
+            return error.message;
         }
     }
     
